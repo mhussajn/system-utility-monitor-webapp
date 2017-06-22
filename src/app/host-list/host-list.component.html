@@ -1,0 +1,10 @@
+<h3 class="text-center">Avalible hosts</h3>
+<br />
+<ul class="list-unstyled">
+  <li *ngFor="let host of hosts" >
+    <button type="button" class="btn btn-default btn-block" (click)="gotoContainer(host)">{{host}}</button>
+  </li>
+</ul>
+<p>
+{{selectedHost}}
+</p>
