@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { ListDataService } from './list-data.service';
 import { UsageDataService } from './usage-data.service';
 import { HostListComponent } from './host-list/host-list.component';
+import { SelectHostService } from './select-host.service';
+import { HostComponent } from './host/host.component';
+
 
 @NgModule({
   declarations: [
@@ -17,14 +20,15 @@ import { HostListComponent } from './host-list/host-list.component';
     jqxChartComponent,
     ChartComponent,
     HeaderComponent,
-    HostListComponent
+    HostListComponent,
+    HostComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule
   ],
-  providers: [ListDataService,UsageDataService],
+  providers: [ListDataService, UsageDataService, SelectHostService],
   bootstrap: [AppComponent]
 })
 

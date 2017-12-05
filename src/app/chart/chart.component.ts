@@ -3,6 +3,7 @@ import { jqxChartComponent } from 'jqwidgets-framework/jqwidgets-ts/angular_jqxc
 import { Observable } from 'rxjs/Observable';
 
 import { UsageDataService } from '../usage-data.service';
+import { SelectHostService } from '../select-host.service';
 
 @Component({
   selector: 'app-chart',
@@ -11,7 +12,10 @@ import { UsageDataService } from '../usage-data.service';
 })
 export class ChartComponent implements AfterViewInit {
 
-  constructor(private usageData: UsageDataService) {}
+  constructor(private usageData: UsageDataService,
+                private selectedHost: SelectHostService) {}
+
+  selectedInList: string;
 
   @ViewChild('myChart') myChart: jqxChartComponent;
 
@@ -79,6 +83,7 @@ export class ChartComponent implements AfterViewInit {
               });
           });
           this.myChart.update();
+          this.selectedInList = this.selectedHost.selectedHost;
       }, 1000);
   }
 }
