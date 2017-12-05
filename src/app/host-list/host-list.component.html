@@ -1,9 +1,10 @@
-<h3>Active hosts</h3>
-<hr>
-<div class="btn-group-vertical btn-block">
-  <app-host *ngFor="let host of hosts" [host]="host"> ></app-host>  
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading"><h4>Active Hosts</h4></div>
+    <div class="panel-body">
+      <div class="btn-group-vertical btn-block">
+        <app-host *ngFor="let host of hosts" [host]="host"> ></app-host>  
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<h3>Inactive hosts</h3>
-<hr>

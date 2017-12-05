@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListDataService } from '../list-data.service';
 
-import { SelectHostService } from '../select-host.service';
+// import { SelectHostService } from '../select-host.service';
 
 @Component({
   selector: 'app-host-list',

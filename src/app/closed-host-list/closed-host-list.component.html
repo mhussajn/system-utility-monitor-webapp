@@ -1,0 +1,10 @@
+<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4>Closed Hosts</h4></div>
+      <div class="panel-body">
+        <div class="btn-group-vertical btn-block">
+          <app-closed-host *ngFor="let closedHost of closedHosts" [closedHost]="closedHost"> ></app-closed-host>  
+        </div>
+      </div>
+    </div>
+  </div>
