@@ -1,0 +1,32 @@
+<ol>
+  <li>Add a Input field which updates a property ('username') via Two-Way-Binding</li>
+  <li>Output the username property via String Interpolation (in a paragraph below the input)</li>
+  <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+  <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+<hr>
+<div class="main">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <label>User Name</label>
+      <input 
+      type="text" 
+      class="form-control"
+      [(ngModel)] = "userName">
+    </div>    
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-xs-2">
+      <p>{{userName}}</p>
+    </div>
+    <div class="col-xs-2">
+      <button
+      id="resetButton"
+      class="btn btn-primary"
+      [disabled]="isDisabled()"
+      (click)="onReset()">Reset User</button>
+    </div>
+  </div>
+</div>
+</div>
